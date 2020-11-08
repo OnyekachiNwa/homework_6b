@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Page</title>
+    <link rel="stylesheet" type="text/css" href="productspage.css">
+    <script src="hw6.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+      var product1 = {
+        price: 3.19,
+        name: "The Original Bun",
+        id: "ogbun",
+      };
+
+      var product2 = {
+        price: 3.19,
+        name: "Blackberry",
+        id: "blackberry",
+      };
+
+      var product3 = {
+        price: 3.19,
+        name: "Walnut",
+        id: "walnut",
+      };
+
+      var product4 = {
+        price: 3.49,
+        name: "The Original (Gluten-Free)",
+        id: "glutenfree",
+      };
+
+      var product5 = {
+        price: 3.19,
+        name: "Pumpkin Spice",
+        id: "pumpkinspice",
+      };
+
+      var product6 = {
+        price: 3.19,
+        name: "Caramel Pecan",
+        id: "caramelpecan",
+      };
+
+      localStorage.setItem(product1.id, JSON.stringify(product1));
+      localStorage.setItem(product2.id, JSON.stringify(product2));
+      localStorage.setItem(product3.id, JSON.stringify(product3));
+      localStorage.setItem(product4.id, JSON.stringify(product4));
+      localStorage.setItem(product5.id, JSON.stringify(product5));
+      localStorage.setItem(product6.id, JSON.stringify(product6));
+    </script>
+  </head>
+
+  <body onload="linkingPages()">
+    <header>
+      <a id="logo" href="index.html">
+        <img id="logoimage" src="images/logo.png" alt="bun bun image">
+      </a>
+
+      <a id="logotext" href="index.html">
+        <img id="bunbunbakeshop" src="images/bunbuntext.png" alt="bun bun logo text">
+      </a>
+
+      <div id="carticon">
+        <a href="yourcart.html">
+          <img src="images/paperbag_noun.png" alt="cart icon" height=30>
+        </a>
+      </div>
+
+      <span id="cartTotal"></span>
+
+      <div id="linedivider"> | </div>
+
+      <div id="hamburgermenu">
+        <img src="images/hamburgermenu.png" alt="hamburger menu" height=25>
+      </div>
+    </header>
+
+    <main>
+
+      <div id="products">
+        <!--entire single product box-->
+        <div class="singleproduct">
+          <!--image and show more div-->
+          <div class="prodimage" id="ogbun">
+            <p class="p1">The Original Bun</p>
+            <p class="p2">$3.19</p>
+          </div>
+          <!--dropdown divs-->
+          <div class="prodinfo">
+            <span class="showmore">Show more</span>
+            <div>
+              <a class="showmorebutton" href="proddetail.html?ogbun">+</a>
+            </div>
+          </div>
+        </div>
+
+        <!--entire single product box-->
+        <div class="singleproduct">
+          <!--image and showmore box-->
+          <div class="prodimage" id="blackberry">
+            <p class="p1">Blackberry</p>
+            <p class="p2">$3.19</p>
+          </div>
+          <!--dropdown div-->
+            <div class="prodinfo">
+                <span class="showmore">Show more</span>
+                <div>
+                  <a class="showmorebutton" href="proddetail.html?blackberry">+</a>
+                </div>
+              </div>
+          </div>
+
+        <!--entire single product box-->
+        <div class="singleproduct">
+          <div class="prodimage" id="walnut">
+            <p class="p1">Walnut</p>
+            <p class="p2">$3.19</p>
+          </div>
+          <div class="prodinfo">
+              <span class="showmore">Show more</span>
+            <div>
+              <a class="showmorebutton" href="proddetail.html?walnut">+</a>
+            </div>
+          </div>
+        </div>
+
+        <!--entire single product box-->
+        <div class="singleproduct">
+          <div class="prodimage" id="glutenfree">
+            <p class="p1">The Original Bun<br>(Gluten Free)</p>
+            <p class="p2">$3.49</p>
+          </div>
+          <div class="prodinfo">
+            <span class="showmore">Show more</span>
+            <div>
+              <a class="showmorebutton" href="proddetail.html?glutenfree">+</a>
+            </div>
+          </div>
+        </div>
+
+        <!--entire single product box-->
+        <div class="singleproduct">
+          <div class="prodimage" id="pumpkinspice">
+            <p class="p1">Pumpin Spice</p>
+            <p class="p2">$3.19</p>
+          </div>
+          <div class="prodinfo">
+            <span class="showmore">Show more</span>
+            <div>
+              <a class="showmorebutton" href="proddetail.html?pumpkinspice">+</a>
+            </div>
+          </div>
+        </div>
+
+        <!--entire single product box-->
+        <div class="singleproduct">
+          <div class="prodimage" id="caramelpecan">
+            <p class="p1">Caramel Pecan</p>
+            <p class="p2">$3.19</p>
+          </div>
+          <div class="prodinfo">
+            <span class="showmore">Show more</span>
+            <div>
+              <a class="showmorebutton" href="proddetail.html?caramelpecan">+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span> Our Story |</span>
+      <span> Location |</span>
+      <span> Ingredients |</span>
+      <a id="productfooter" href="productspage.html"> Products |</a>
+      <span> Contact |</span>
+      <span> Help </span>
+    </footer>
+  </body>
+
+</html>

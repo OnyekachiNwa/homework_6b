@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" type="text/css" href="proddetails.css">
+    <script src="hw6.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  </head>
+
+  <body onload="linkingPages()">
+
+    <header>
+      <a id="logo" href="index.html">
+        <img src="images/logo.png" alt="bun bun image" width=68 height=68>
+      </a>
+
+      <a id="logotext" href="index.html">
+        <img src="images/bunbuntext.png" alt="bun bun logo text" height=30>
+      </a>
+
+      <div id="carticon">
+        <a href="yourcart.html">
+          <img src="images/paperbag_noun.png" alt="cart icon" height=30>
+        </a>
+      </div>
+
+      <p id="cartTotal"></p>
+
+      <div id="linedivider"> | </div>
+
+      <div id="hamburgermenu">
+        <img src="images/hamburgermenu.png" alt="hamburger menu" height=25>
+      </div>
+    </header>
+
+    <!--product detail box-->
+    <div id="detail">
+      <!--image of bun-->
+      <div id="ogbunBIGimage"></div>
+      <!--all text div and exit-->
+      <div id="text">
+        <!--<h2 id="productdesc"></h2>-->
+        <a id="exit" href="productspage.html">x</a><br>
+        <h1 id="productname">The Original Bun</h1>
+        <div id="productdesc">
+          <p id="p1"> This flavorful bun is a delicacy that warms<br>
+            any palate with rich, deep, cinnamon spices and<br>
+            sugary overtones. This delicious bun will bring joy to<br>
+            your appetite, while adding a little spice to your day.</p>
+          <p id="h2">Ingredients<p>
+          <p id="p2">Milk, Eggs, Salted Butter, Flour, Brown Sugar,<br>
+            Cinnamon, Maple</p>
+        </div>
+        <!--dollar and price div-->
+        <div id="nobr">
+          <span id="dollarsign">$</span>
+          <h3 id="productprice">0.00</h3>
+        </div>
+          <!--drop down and add to cart div-->
+          <div class="prodinfo">
+          <!--qty dropdown-->
+          <label for="quantity">Quantity</label>
+          <input id="quantity" style="display:none">
+            <select name="quantity" id="quantitydropdown" class="quantity">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select><br>
+            <!--glaze dropdown-->
+            <label for="glaze">Glaze</label>
+            <input id="glaze" style="display:none">
+              <select name="glaze" id="glazedropdown" class="glaze">
+                <option value="none">None</option>
+                <option value="sugar-milk">Sugar-milk</option>
+                <option value="vanilla-milk">Vanilla-milk</option>
+                <option value="double-chocolate">Double-chocolate</option>
+              </select><br><br>
+              <!--href="yourcart.html"-->
+            <a id="addtocart" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span> Our Story |</span>
+      <span> Location |</span>
+      <span> Ingredients |</span>
+      <a id="productfooter" href="productspage.html"> Products |</a>
+      <span> Contact |</span>
+      <span> Help </span>
+    </footer>
+  </body>
+</html>

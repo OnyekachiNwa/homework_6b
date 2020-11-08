@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+html {
+  background-color: #E4DBD4;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 6% 80% 2% 1% 1% 2%;
+  grid-template-rows: 70px;
+  grid-gap: 10px;
+  margin-bottom: 0;
+}
+
+#logo {
+  position: relative;
+  top:3%; left:13%;
+}
+
+#logoimage {
+  width: 68px;
+  height: 68px;
+}
+#logotext {
+  align-self: center;
+}
+
+#bunbunbakeshop {
+  height: 30px;
+}
+
+#carticon{
+  align-self: center;
+  justify-self: end;
+}
+
+#cartTotal {
+  align-self: center;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+#linedivider {
+  align-self: center;
+  justify-self: end;
+  color: #B49984;
+  font-size: 27px;
+  font-weight: 100;
+}
+
+#hamburgermenu {
+  align-self: center;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2,300px);
+    grid-gap: 1em;
+    justify-content: center;
+}
+
+.prodimage {
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    opacity: 90%;
+    text-align: center;
+    align-content: center;
+}
+
+.p1 {
+  font-size: 22px;
+  font-weight: 900;
+  position: relative;
+  top: 15%;
+}
+
+.p2 {
+  margin-top: 10rem;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+#ogbun {
+    background-image: url("images/TheOriginalBun.jpg");
+    background-size: cover;
+    background-position-x: -125px;
+    color: white;
+}
+
+#blackberry {
+    background-image: url("images/blackberryBun.jpg");
+    color: #FFFFFF;
+}
+
+#walnut {
+    background-image: url("images/walnutbun.jpg");
+}
+
+#glutenfree {
+    background-image: url("images/glutenfree.jpg");
+}
+
+#pumpkinspice {
+    background-image: url("images/pumpkinspice.jpg");
+    color: #FFFFFF;
+}
+
+#caramelpecan {
+    background-image: url("images/carmelpecan.jpg");
+}
+
+.prodinfo {
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #B49984;
+  padding-top: 5px;
+  height: 50px;
+  width: 100%;
+  font-weight: 100;
+  justify-content: center;
+}
+.showmorebutton {
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  font-weight: 100;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: #F0EFCC;
+  border-radius: 50%;
+
+  position: absolute;
+}
+
+.showmore {
+  font-size: 12px;
+  font-weight: 100;
+  justify-self: end;
+}
+
+select {
+  font-weight: 100;
+  appearance: none;
+  border: none;
+  width: 50%;
+  outline-style: none;
+  margin-top: 5px;
+}
+
+.addtocart {
+  position: absolute;
+  align-self: center;
+  bottom: 10%;
+  right: 10%;
+  width: 150px;
+  height: 25px;
+  padding: 5px;
+  background-color: #F0EFCC;
+
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  height: 2rem;
+  font-size: 16px;
+  color: #B49984;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0%;
+  background-color: #E4DBD4;
+}
+
+#productfooter {
+  color: #B49984;
+  text-decoration: none;
+}
+
+#productfooter:visited, #productfooter:active {
+  text-decoration: none;
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+html {
+  background-color: #E4DBD4;
+  background-image: url("images/homepagebg.png");
+  font-family: "Roboto", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 6% 90%;
+  grid-template-rows: 70px;
+  grid-gap: 10px;
+}
+
+#logo {
+  position: relative;
+  top:3%; left:13%;
+}
+
+#logoimage {
+  width: 68px;
+  height: 68px;
+}
+#logotext {
+  align-self: center;
+}
+
+#bunbunbakeshop {
+  height: 30px;
+}
+
+#backgroundgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.backgroundimages {
+  width: 400px;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#firstimage {
+  background-image: url("images/hpbuns1.jpg");
+}
+
+#secondimage {
+  background-image: url("images/hpbuns2.jpg");
+}
+
+#thirdimage {
+  background-image:url("images/hpbuns3.jpg");
+}
+
+#ordernowbutton {
+  position: absolute;
+  top: 50%; left: 45%;
+  padding: 15px;
+  background-color: #B49984;
+  color: #FFFFFF;
+
+  font-family: "Arizonia", cursive;
+  font-size: 30px;
+  line-height: 2rem;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+#ordernowbutton:visited, #ordernowbutton:active {
+  text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  height: 2rem;
+
+  font-size: 16px;
+  color: #B49984;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0%;
+}
+
+#productfooter {
+  color: #B49984;
+  text-decoration: none;
+}
+
+#productfooter:visited, #productfooter:active {
+  text-decoration: none;
+}

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+html {
+  /*background-color: #E4DBD4;*/
+  background: linear-gradient(to right, #E4DBD4 70%, white 30%);
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 6% 90%;
+  grid-template-rows: 70px;
+  grid-gap: 10px;
+}
+
+#logo {
+  position: relative;
+  top:3%; left:13%;
+}
+
+#logotext {
+  align-self: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnavbar a {
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 5%;
+  font-size: 12px;
+  font-weight: 100;
+  color: black;
+}
+
+hr {
+  border: 0;
+  border-color: black;
+  width: 50%;
+  height: 0;
+  border-top: 1px solid black;
+}
+
+.navpages {
+}
+
+#maingrid {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+#thecart {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 100px 100px;
+  grid-gap: 10px;
+}
+
+.oneitem {
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+  grid-template-rows: 100px;
+  grid-gap: 10px;
+}
+
+.image {
+  background-image: url("images/TheOriginalBun.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.edit, .glaze {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.editside {
+  text-align: right;
+  padding-right: 30px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+h2 {
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+.calltoaction {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 100px;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+#keepshopping {
+  border-style: solid;
+  border-color: #F0EFCC;
+  border-width: medium;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#proceed {
+  background-color: #F0EFCC;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cartsummary {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  padding: 3%;
+  font-weight: 100;
+}
+
+#title {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+#cartCount {
+  text-align: right;
+  font-weight: 100;
+}
+
+#subprice {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.subtotal {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.footer {
+  width: 100%;
+  height: 2rem;
+  padding-top: 1rem;
+  font-size: 16px;
+  color: #B49984;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0%;
+}
+
+#productfooter {
+  color: #B49984;
+  text-decoration: none;
+}
+
+#productfooter:visited, #productfooter:active {
+  text-decoration: none;
+}
