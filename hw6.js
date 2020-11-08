@@ -34,24 +34,28 @@ function addToCart() {
 	var glaze = document.getElementById("glazedropdown").value;
 	var quantity = document.getElementById("quantitydropdown").value;
 	var price = Number(quantity) * parseFloat(document.getElementById("productprice").innerHTML);
+
 	//create object instance 6b
 	var purchase = new Product(name, price, glaze, quantity)
 	//add this to a list
 	productList.push(purchase)
-	//update the list by adding each order of items
-	updateCart(productList.length)
+};
+
+//console.log(productList) //works globally
+
+//the cartTotal is the amount of orders (seen next to shopping cart)
+function updateCart() {
+	//the cartTotal is the length of the productList
+	var cartTotal = document.getElementById("cartTotal")
+	cartTotal.innerHTML = productList.length //has to be in a function?
+	//console.log(productList.length)
 	//console.log(productList)
 };
 
-//the cartTotal is the amount of orders (seen next to shopping cart)
-function updateCart(purchase) {
-	var cartTotal = document.getElementById("cartTotal")
-	cartTotal.innerHTML = purchase
-
-	//6b
-	//store the productList in localStorage (setItem)
-	var stringify = localStorage.setItem("order", JSON.stringify(productList))
-	var objOrder = JSON.parse(localStorage.getItem("order"));
+//6b
+//store the productList in localStorage (setItem)
+var stringify = localStorage.setItem("order", JSON.stringify(productList))
+var objOrder = JSON.parse(localStorage.getItem("order"));
 
 	//console.log(obj)
 	//alert(objOrder[0].name +" is in the cart") //omg 2 hours to figure this out D:
@@ -68,8 +72,7 @@ function updateCart(purchase) {
 			var subtotal = total.toFixed(2)
 			subtotal = document.getElementById("subprice").innerHTML;
 		}
-	}
-};
+	};
 
 //function to checkoutItems when cart icon is clicked
 //loop through obj, get all the qty: values and add them >> replace innerHTML cartTotal on yourcartHTML
