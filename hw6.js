@@ -55,6 +55,7 @@ function updateCart(purchase) {
 
 	//console.log(obj)
 	//alert(objOrder[0].name +" is in the cart") //omg 2 hours to figure this out D:
+	//I AM HERE having a scope problem with my functions (can't separate functions and localStorage) w/o messing up code
 	function checkout() {
 		var cost = []
 		var total = 0
