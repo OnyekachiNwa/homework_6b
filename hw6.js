@@ -53,15 +53,6 @@ function updateCart() {
 	//6b
 	//store the productList in localStorage (setItem)
 	var stringify = localStorage.setItem("order", JSON.stringify(productList))
-	var objOrder = JSON.parse(localStorage.getItem("order"));
-
-	//loop through obj and just pull out names (make a list)
-	for (var i=0; i < objOrder.length; i++) {
-		for (var j=0; j < objOrder[i].length; j++) {
-		}
-		var total = total + objOrder[i].price
-		var subtotal = total.toFixed(2)
-	}
 
 	//carryOver() to store info and bring up on Cart page
 	carryOver()
@@ -69,7 +60,17 @@ function updateCart() {
 
 //console.log(productList) //works globally... or does it?
 
+var objOrder = JSON.parse(localStorage.getItem("order"));
+var total = 0
+
 function carryOver() {
-	var subtotal = document.getElementById("cartCount").innerHTML
-	subtotal =
+	//loop through obj and just pull out names (make a list)
+	for (var i=0; i < objOrder.length; i++) {
+		for (var j=0; j < objOrder[i].length; j++) {
+		}
+		total = total + objOrder[i].price
+		var subtotal = total.toFixed(2)
+	}
+
+	document.getElementById("subtotalprice").innerHTML = "$" + subtotal
 };
