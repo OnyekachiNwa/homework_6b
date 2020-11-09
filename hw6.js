@@ -62,6 +62,7 @@ function updateCart() {
 
 var objOrder = JSON.parse(localStorage.getItem("order"));
 var total = 0
+var cartsummary = objOrder.length
 
 function carryOver() {
 	//loop through obj and just pull out names (make a list)
@@ -71,6 +72,18 @@ function carryOver() {
 		total = total + objOrder[i].price
 		var subtotal = total.toFixed(2)
 	}
+	document.getElementById("cartCount").innerHTML = cartsummary + " Items"
+	document.getElementById("subtotalprice").innerHTML = "$ " + subtotal
 
-	document.getElementById("subtotalprice").innerHTML = "$" + subtotal
+	//itemZero
+	document.getElementById("itemZero").innerHTML = objOrder[0].name
+	document.getElementById("itemZeroPrice").innerHTML = "$" + objOrder[0].price
+
+	//itemOne
+	document.getElementById("itemOne").innerHTML = objOrder[1].name
+	document.getElementById("itemOnePrice").innerHTML = "$" + objOrder[1].price
 };
+
+function clearItemOne() {
+	localStorage.removeItem(order[0]); //order is not defined
+}
