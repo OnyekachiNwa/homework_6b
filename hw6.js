@@ -78,12 +78,17 @@ function carryOver() {
 	//itemZero
 	document.getElementById("itemZero").innerHTML = objOrder[0].name
 	document.getElementById("itemZeroPrice").innerHTML = "$" + objOrder[0].price
-
+	document.getElementById("itemZeroGlaze").innerHTML = objOrder[0].quantity + " X Glaze: " + objOrder[0].glaze
 	//itemOne
 	document.getElementById("itemOne").innerHTML = objOrder[1].name
 	document.getElementById("itemOnePrice").innerHTML = "$" + objOrder[1].price
+	document.getElementById("itemOneGlaze").innerHTML = objOrder[1].quantity + " X Glaze: " + objOrder[1].glaze
+};
+
+function clearItemZero() {
+	localStorage.removeItem(objOrder[0]) //order is not defined
 };
 
 function clearItemOne() {
-	localStorage.removeItem(order[0]); //order is not defined
-}
+	localStorage.removeItem(objOrder[1])
+};
