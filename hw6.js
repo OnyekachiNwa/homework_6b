@@ -29,6 +29,7 @@ class Product {
 
 //add the dropdown value to the cartList
 function addToCart() {
+
 	//objects for 6b
 	var name = document.getElementById("productname").innerText;
 	var glaze = document.getElementById("glazedropdown").value;
@@ -47,17 +48,13 @@ function updateCart() {
 	var cartTotal = document.getElementById("cartTotal")
 	cartTotal.innerHTML = productList.length //has to be in a function?
 
-	//console.log(productList.length)
-	//console.log(productList)
-
 	//6b
 	//store the productList in localStorage (setItem)
 	var stringify = localStorage.setItem("order", JSON.stringify(productList))
 
 	//carryOver() to store info and bring up on Cart page
-	carryOver()
+	//carryOver()
 };
-
 //console.log(productList) //works globally... or does it?
 
 var objOrder = JSON.parse(localStorage.getItem("order"));
@@ -80,15 +77,15 @@ function carryOver() {
 	document.getElementById("itemZeroPrice").innerHTML = "$" + objOrder[0].price
 	document.getElementById("itemZeroGlaze").innerHTML = objOrder[0].quantity + " X Glaze: " + objOrder[0].glaze
 	//itemOne
-	document.getElementById("itemOne").innerHTML = objOrder[1].name
-	document.getElementById("itemOnePrice").innerHTML = "$" + objOrder[1].price
-	document.getElementById("itemOneGlaze").innerHTML = objOrder[1].quantity + " X Glaze: " + objOrder[1].glaze
+	if (objOrder.length > 1) {
+		document.getElementById("itemOne").innerHTML = objOrder[1].name
+		document.getElementById("itemOnePrice").innerHTML = "$" + objOrder[1].price
+		document.getElementById("itemOneGlaze").innerHTML = objOrder[1].quantity + " X Glaze: " + objOrder[1].glaze
+	}
 };
 
-function clearItemZero() {
-	localStorage.removeItem(objOrder[0]) //order is not defined
-};
-
-function clearItemOne() {
-	localStorage.removeItem(objOrder[1])
-};
+//no more time to remove each item from the cart
+function clearEntireCart() {
+	alert("Please refresh the page to clear you cart.")
+	localStorage.clear();
+}
