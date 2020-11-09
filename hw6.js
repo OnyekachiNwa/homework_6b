@@ -41,45 +41,35 @@ function addToCart() {
 	productList.push(purchase)
 };
 
-//console.log(productList) //works globally
-
 //the cartTotal is the amount of orders (seen next to shopping cart)
 function updateCart() {
 	//the cartTotal is the length of the productList
 	var cartTotal = document.getElementById("cartTotal")
 	cartTotal.innerHTML = productList.length //has to be in a function?
+
 	//console.log(productList.length)
 	//console.log(productList)
+
+	//6b
+	//store the productList in localStorage (setItem)
+	var stringify = localStorage.setItem("order", JSON.stringify(productList))
+	var objOrder = JSON.parse(localStorage.getItem("order"));
+
+	//loop through obj and just pull out names (make a list)
+	for (var i=0; i < objOrder.length; i++) {
+		for (var j=0; j < objOrder[i].length; j++) {
+		}
+		var total = total + objOrder[i].price
+		var subtotal = total.toFixed(2)
+	}
+
+	//carryOver() to store info and bring up on Cart page
+	carryOver()
 };
 
-//6b
-//store the productList in localStorage (setItem)
-var stringify = localStorage.setItem("order", JSON.stringify(productList))
-var objOrder = JSON.parse(localStorage.getItem("order"));
+//console.log(productList) //works globally... or does it?
 
-	//console.log(obj)
-	//alert(objOrder[0].name +" is in the cart") //omg 2 hours to figure this out D:
-	//I AM HERE having a scope problem with my functions (can't separate functions and localStorage) w/o messing up code
-	function checkout() {
-		var cost = []
-		var total = 0
-		//rename items in cart
-		//loop through obj and just pull out names (make a list)
-		for (var i=0; i < objOrder.length; i++) {
-			for (var j=0; j < objOrder[i].length; j++) {
-			}
-			total += objOrder[i].price
-			var subtotal = total.toFixed(2)
-			subtotal = document.getElementById("subprice").innerHTML;
-		}
-	};
-
-//function to checkoutItems when cart icon is clicked
-//loop through obj, get all the qty: values and add them >> replace innerHTML cartTotal on yourcartHTML
-
-
-
-	//make all qty add/count into 1 value
-	//replace elements with js
-	//document.getElementById("cartCount").innerHTML = itemTotal + " Items";
-//}
+function carryOver() {
+	var subtotal = document.getElementById("cartCount").innerHTML
+	subtotal =
+};
